@@ -82,7 +82,6 @@ class AddContact {
 
 public class AddressBookMain {
 	Scanner sc = new Scanner(System.in);
-	static ArrayList<AddContact> contactarray = new ArrayList<>(); // array declaration
 	AddContact contacts = new AddContact(); // object creation for AddContact class
 
 	public void contactDetails() {
