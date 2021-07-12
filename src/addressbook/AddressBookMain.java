@@ -101,7 +101,6 @@ public class AddressBookMain {
 		contacts.setZip(sc.nextLong());
 		System.out.println("Enter phone number:");
 		contacts.setPhonenumber(sc.nextLong());
-		System.out.println();
 	}
 
 	public static void main(String[] args) {
