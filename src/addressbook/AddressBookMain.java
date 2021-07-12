@@ -1,6 +1,5 @@
 package addressbook;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 class AddContact {
