@@ -99,7 +99,7 @@ public class AddressBookMain {
 				System.out.println("Enter valid first name");
 				break;
 			}
-			System.out.println("User details deleted.");
+			System.out.println("contact details deleted");
 			System.out.println(arraycontactDetails);
 		}
 
