@@ -74,8 +74,8 @@ class AddContact {
 
 	/* overriding */
 	public String toString() {
-		return " first name:" + firstName + "\nlast name:" + lastName + "\naddress:" + address + "\ncity:" + city + "\nstate:"
-				+ state + "\nemail:" + email + "\nzipcode:" + zip + "\n phone number: " + phonenumber;
+		return "first name:" + firstName + "\nlast name:" + lastName + "\naddress:" + address + "\ncity:" + city
+				+ "\nstate:" + state + "\nemail:" + email + "\nzipcode:" + zip + "\nphone number: " + phonenumber;
 	}
 
 }
@@ -122,7 +122,7 @@ public class AddressBookMain {
 
 				switch (edit) {
 				case 1:
-					System.out.println("Enter first name");
+					System.out.println("Enter first name \n");
 					arraycontactDetails.get(i).setFirstname(sc.next());
 					break;
 				case 2:
@@ -163,6 +163,24 @@ public class AddressBookMain {
 
 	}
 
+	public void deletecontact() {
+		System.out.println("Confirm your first name to delete contact");
+		String confirmName = sc.next();
+		for (int i = 0; i < arraycontactDetails.size(); i++) {
+
+			if (arraycontactDetails.get(i).getFirstname().equals(confirmName)) {
+
+				arraycontactDetails.remove(i);
+			} else {
+				System.out.println("Enter valid first name");
+				break;
+			}
+			System.out.println("User details deleted.");
+			System.out.println(arraycontactDetails);
+		}
+
+	}
+
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program");
 		AddressBookMain addcontact = new AddressBookMain();
@@ -171,7 +189,7 @@ public class AddressBookMain {
 		int i = 0;
 		while (i == 0) {
 			System.out.println("What do you want:");
-			System.out.println("1.Add details.\n2.Edit details.");
+			System.out.println("1.Add details.\n2.Edit details.\n3.Delete contact ");
 			int choose = sc.nextInt();
 			switch (choose) {
 			case 1:
@@ -179,6 +197,9 @@ public class AddressBookMain {
 				break;
 			case 2:
 				addcontact.edit();
+				break;
+			case 3:
+				addcontact.deletecontact();
 				break;
 			default:
 				System.out.println("Wrong option");
